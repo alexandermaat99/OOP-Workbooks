@@ -43,4 +43,9 @@ public class Movie {
   public void setRating(double newRating) {
     this.rating = newRating;
   }
+
+  //toString method
+  public String toString() {
+    return this.rating + "\t" + this.format + "\t\t" + this.name;
+  }
 }
