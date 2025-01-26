@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Contact {
 
   private String name;
@@ -6,11 +8,11 @@ public class Contact {
   private int age;
 
   //constructor
-  public Contact(String name, String phoneNumber, String birthDate, int age) {
+  public Contact(String name, String phoneNumber, String birthDate) {
     this.name = name;
     this.phoneNumber = phoneNumber;
     this.birthDate = birthDate;
-    this.age = age;
+    this.age = toAge(birthDate);
   }
 
   //copy constructor
@@ -48,14 +50,32 @@ public class Contact {
 
   public void setBirthDate(String newBirthDate) {
     this.birthDate = newBirthDate;
+    setAge(toAge(newBirthDate));
   }
 
-  public void setAge(int newAge) {
+  private void setAge(int newAge) {
     this.age = newAge;
+  }
+
+  //toAge
+  public int toAge(String birthString) {
+    LocalDate birthday = LocalDate.parse(birthString);
+    LocalDate today = LocalDate.now();
+    return java.time.Period.between(birthday, today).getYears();
   }
 
   //toString
   public String toString() {
-    return (name + " " + phoneNumber + " " + birthDate + " " + age);
+    return (
+      "Name: " +
+      name +
+      "\nPhone: " +
+      phoneNumber +
+      "\nBirthDate: " +
+      birthDate +
+      "\nAge: " +
+      age +
+      "\n"
+    );
   }
 }
