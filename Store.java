@@ -20,4 +20,17 @@ public class Store {
   public void addBook(Book bookToAdd) {
     this.books.add(new Book(bookToAdd));
   }
+
+  //possible to name contains even though it's a default function since the signature is different
+  public boolean contains(Book bookToCheck) {
+    return this.books.contains(bookToCheck);
+  }
+
+  public void sellBook(String title) {
+    for (int i = 0; i < this.books.size(); i++) {
+      if (this.books.get(i).getTitle().equals(title)) {
+        this.books.remove(i);
+      }
+    }
+  }
 }
