@@ -63,7 +63,7 @@ public class Magazine {
         "Publication year must be greater than 0"
       );
     }
-    this.issueNumber = newPublicationYear;
+    this.publicationYear = newPublicationYear;
   }
 
   public int getPublicationYear() {
