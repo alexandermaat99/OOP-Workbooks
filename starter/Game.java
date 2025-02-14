@@ -1,3 +1,4 @@
+import constants.Regulation;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -61,9 +62,9 @@ public class Game {
       "\nDate: " +
       this.date.toString() +
       "\nCourt length (feet): " +
-      94 +
+      Regulation.COURT_LENGTH +
       "\nRim height (feet): " +
-      10 +
+      Regulation.RIM_HEIGHT +
       "\nDistance from three-point arc: " +
       23 +
       "\nPoints awarded beyond the three-point arc: " +
