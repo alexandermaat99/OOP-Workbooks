@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Map;
 
 public class Team {
@@ -5,25 +6,29 @@ public class Team {
   private String name;
   private Map<String, String> players;
 
+  //declaring a Map variable called players
+
   public Team(String name) {
-    // TODO
+    this.name = name;
+    this.players = new HashMap<>();
+    //this is saying when you create a new team, it will take in a name for the team and then
+    //initializing that map variable called players as a hashmap, Map is polymorphic so we can
+    //use any kind of map to init it
   }
 
   public String getName() {
-    // TODO
-    return null;
+    return this.name;
   }
 
   public void setName(String name) {
-    // TODO
+    this.name = name;
   }
 
   public String getPlayer(String position) {
-    // TODO
-    return null;
+    return this.players.get(position);
   }
 
   public void setPlayer(String position, String player) {
-    // TODO
+    this.players.put(position, player);
   }
 }
