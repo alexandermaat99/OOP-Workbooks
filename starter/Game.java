@@ -1,4 +1,6 @@
-import constants.Regulation;
+import static constants.Regulation.*;
+
+import constants.Position;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -29,26 +31,26 @@ public class Game {
       away.getName() +
       ".\n" +
       "\n - The starting lineup for the home team is: at point guard, " +
-      home.getPlayer("POINT_GUARD") +
+      home.getPlayer(Position.POINT_GUARD) +
       "; at shooting guard, " +
-      home.getPlayer("SHOOTING_GUARD") +
+      home.getPlayer(Position.SHOOTING_GUARD) +
       "; at small forward, " +
-      home.getPlayer("SMALL_FORWARD") +
+      home.getPlayer(Position.SMALL_FORWARD) +
       "; at power forward, " +
-      home.getPlayer("POWER_FORWARD") +
+      home.getPlayer(Position.POWER_FORWARD) +
       "; and at center, " +
-      home.getPlayer("CENTER") +
+      home.getPlayer(Position.CENTER) +
       ".\n" +
       "\n - The starting lineup for the visiting team is: at point guard, " +
-      away.getPlayer("POINT_GUARD") +
+      away.getPlayer(Position.POINT_GUARD) +
       "; at shooting guard, " +
-      away.getPlayer("SHOOTING_GUARD") +
+      away.getPlayer(Position.SHOOTING_GUARD) +
       "; at small forward, " +
-      away.getPlayer("SMALL_FORWARD") +
+      away.getPlayer(Position.SMALL_FORWARD) +
       "; at power forward, " +
-      away.getPlayer("POWER_FORWARD") +
+      away.getPlayer(Position.POWER_FORWARD) +
       "; and at center, " +
-      away.getPlayer("CENTER") +
+      away.getPlayer(Position.CENTER) +
       ".\n" +
       "\n - Let's give a warm round of applause for both teams as they take the court!" +
       "\n*****************************************************************************"
@@ -62,21 +64,21 @@ public class Game {
       "\nDate: " +
       this.date.toString() +
       "\nCourt length (feet): " +
-      Regulation.COURT_LENGTH +
+      COURT_LENGTH +
       "\nRim height (feet): " +
-      Regulation.RIM_HEIGHT +
+      RIM_HEIGHT +
       "\nDistance from three-point arc: " +
-      23 +
+      THREE_POINT_DISTANCE +
       "\nPoints awarded beyond the three-point arc: " +
-      3 +
+      BEYOND_THREE_POINT_ARC +
       "\nPoints awarded inside the three-point arc: " +
-      2 +
+      INSIDE_THREE_POINT_ARC +
       "\nPoints awarded from a free throw: " +
-      1 +
+      FREE_THROW +
       "\nLength of each quarter (minutes): " +
-      12 +
+      QUARTER_LENGTH +
       "\nSeconds to attempt shot after gaining possession: " +
-      24
+      POSSESSION_TIME
     );
   }
 }
