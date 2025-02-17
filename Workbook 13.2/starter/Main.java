@@ -14,7 +14,9 @@ public class Main {
       77.99
     );
 
-    // TODO
+    //sort prices descending in order
+    prices.sort((a, b) -> (b.compareTo(a)));
+    prices.forEach(price -> System.out.println(price));
 
     System.out.println("\nPrices\n------");
 
@@ -33,10 +35,11 @@ public class Main {
       "The Picture of Dorian Gray"
     );
 
-    // TODO
+    //sort book in ascending alphabetical order
+    books.sort((a, b) -> a.compareTo(b));
 
     System.out.println("\nLibrary\n--------");
     // TODO
-
+    books.forEach(book -> System.out.println(book));
   }
 }
